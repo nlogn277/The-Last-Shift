@@ -55,8 +55,8 @@ public class Movement : MonoBehaviour
         }
         
         //Moves player forward and backward (they are negative because it was inverted when the game is played).
-        Vector3 forward = -cameraTransform.forward;
-        Vector3 right = -cameraTransform.right;
+        Vector3 forward = cameraTransform.forward;
+        Vector3 right = cameraTransform.right;
         
         //Ensures that the player does not go through the ground and keeps them level with the terrain. 
         //Disables vertical camera movements.
