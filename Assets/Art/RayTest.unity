@@ -252,6 +252,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8236349}
   m_CullTransparentMesh: 1
+--- !u!1 &318998630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318998633}
+  - component: {fileID: 318998632}
+  - component: {fileID: 318998631}
+  - component: {fileID: 318998634}
+  m_Layer: 0
+  m_Name: StorageDoorTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &318998631
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318998630}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &318998632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318998630}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &318998633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318998630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.3, y: 1, z: 11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318998634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318998630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b25681fe2e9654189b93812fc46b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StorageDoor
+  endingText: Case solved! The storage door shut behind Eli and his card snapped. He's safe, and very Hungry
+  lockedText: The door is locked. Find all 3 clues first.
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1027581046}
   - component: {fileID: 1027581047}
+  - component: {fileID: 1027581048}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -766,6 +863,21 @@ MonoBehaviour:
   spawnPoint: {fileID: 1460859449}
   cameraFollow: {fileID: 330585548}
   startButton: {fileID: 8236349}
+--- !u!114 &1027581048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027581045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21a922435c8191478c494652b16499e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CaseManager
+  cluesNeeded: 3
+  doorRenderer: {fileID: 1421885607}
+  unlockedMaterial: {fileID: 2100000, guid: f41f7d8313681af4cbbe9ff790c4be3f, type: 2}
 --- !u!1 &1058650160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClueDisplayManager
   cluePanel: {fileID: 1058650160}
   clueText: {fileID: 734281100}
+--- !u!23 &1421885607 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4597147997660754653, guid: 4bbbf51738a84a8428c68d3a069c2f16, type: 3}
+  m_PrefabInstance: {fileID: 2328051510369695100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1460859448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,3 +1773,4 @@ SceneRoots:
   - {fileID: 949428110833780925}
   - {fileID: 8906379477700220701}
   - {fileID: 1304442705}
+  - {fileID: 318998633}
