@@ -15,7 +15,11 @@ public class ClueItem : MonoBehaviour
             //Send the text to UI Manager Popup.
             if(ClueDisplayManager.Instance != null)
             {
+                //show the clue ot the player
                 ClueDisplayManager.Instance.ShowClue(clueDetails);
+                //Report the collected c;ue ot the casemanager
+                CaseManager.Instance.ClueFound();
+                //Remove collected clue
                 Destroy(gameObject);
             }
 
