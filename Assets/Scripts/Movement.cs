@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
         {
             vertical = 1f;
         }
-        
+
         //Moves player forward and backward (they are negative because it was inverted when the game is played).
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
