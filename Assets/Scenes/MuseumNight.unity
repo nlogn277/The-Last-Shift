@@ -2172,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Museum
       objectReference: {fileID: 0}
+    - target: {fileID: 4491842994985382910, guid: 4bbbf51738a84a8428c68d3a069c2f16, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8847603906255291536, guid: 4bbbf51738a84a8428c68d3a069c2f16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.46916
