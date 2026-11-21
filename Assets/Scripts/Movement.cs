@@ -5,6 +5,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
     [SerializeField] private Transform cameraTransform;
+    //sotres the charcatercontroller attached to this layer. Basically making a box
+    private CharacterController controller;
 
     public void SetCamera(Transform camera)
     {
@@ -13,6 +15,8 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        //Find the character controller attached to this GameObject
+        controller= GetComponent<CharacterController>();
         Debug.Log("Game has started. Waiting for " + gameObject.name + " to move.");
     }
 
@@ -69,7 +73,7 @@ public class Movement : MonoBehaviour
         //Combines all inputs to movement directions. Then simplifes them with normalize.
         Vector3 movement = (forward * vertical + right * horizantal).normalized;
 
-        transform.position += movement * speed * Time.deltaTime;
+        controller.Move(movement * speed * Time.deltaTime);
 
     }
 
