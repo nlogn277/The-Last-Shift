@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,10 +19,10 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         //if Nothing is pressed or moved nothing happens.
-        if (Keyboard.current == null || cameraTransform == null)
-        {
-            return;
-        }
+         if (Keyboard.current == null || cameraTransform == null)
+         {
+             return;
+         }
 
         //Camera Movements: Horizantal controls left - right and Vertical controls up and down. 
         //0f - the player isn't moving yet.
