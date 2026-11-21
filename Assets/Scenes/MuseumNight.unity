@@ -2172,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Museum
       objectReference: {fileID: 0}
+    - target: {fileID: 4491842994985382910, guid: 4bbbf51738a84a8428c68d3a069c2f16, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8847603906255291536, guid: 4bbbf51738a84a8428c68d3a069c2f16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.46916
@@ -2335,6 +2339,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96ebd7f7f9e2624497f4d51232e7eca, type: 3}
+--- !u!1001 &8903004742881805319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.087
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.152
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.597
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7048208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.048413083
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.10952322
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6992057
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -12.879
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577592319841751741, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 88.992
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747085114559113697, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747085114559113697, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: m_Name
+      value: Clue_FlashLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088572278558523798, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
+      propertyPath: clueDetails
+      value: You found a Flashlight! Use this tool to help you navigate the Museum.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a83cb7d9c369d01449b52a3b1e0044ce, type: 3}
 --- !u!1001 &8906379477700220701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2408,5 +2477,6 @@ SceneRoots:
   - {fileID: 7724382810385560540}
   - {fileID: 949428110833780925}
   - {fileID: 8906379477700220701}
+  - {fileID: 8903004742881805319}
   - {fileID: 1304442705}
   - {fileID: 318998633}
