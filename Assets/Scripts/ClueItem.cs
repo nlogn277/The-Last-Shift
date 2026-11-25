@@ -1,45 +1,36 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClueItem : MonoBehaviour
 {
-    [TextArea(3, 5)] //Makes a wide text box in the Inspector.
+    [TextArea(5, 10)]
     [SerializeField] private string clueDetails = "Hello";
+    [SerializeField] private bool isFlashlightClue = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        //Check if the object colliding with the Clue is Player.
         if (other.CompareTag("Player"))
         {
-            //Send the text to UI Manager Popup.
-            if(ClueDisplayManager.Instance != null)
+            if (ClueDisplayManager.Instance != null)
             {
-                //show the clue ot the player
+                // 1. Show clue UI and update CaseManager
                 ClueDisplayManager.Instance.ShowClue(clueDetails);
-                //Report the collected c;ue ot the casemanager
                 CaseManager.Instance.ClueFound();
-                //Remove collected clue
+
+                // 2. Check if the Player has a FlashlightController and unlock it
+                // (Using GetComponentInParent in case the Player's collider is on a child object)
+                FlashlightController flashlight = other.GetComponentInParent<FlashlightController>();
+                if (isFlashlightClue && flashlight != null)
+                {
+                    flashlight.PickUpFlashlight();
+                }
+
+                // 3. Remove the floor flashlight
                 Destroy(gameObject);
             }
-
             else
             {
                 Debug.LogError("ClueDisplayManager Instance is Missing! Make sure it's attached to Canvas.");
             }
         }
-    }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

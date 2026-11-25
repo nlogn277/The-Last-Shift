@@ -9,7 +9,7 @@ public class StorageDoor : MonoBehaviour
 
     //Message shows if the clues are still missing
     [TextArea(3,5)]
-    [SerializeField] private string lockedText = "The door is locked. Find all 3 clues first.";
+    [SerializeField] private string lockedText = "The door is locked. Find all 5 clues first.";
 
     private void OnTriggerEnter (Collider other)
     {

@@ -27,7 +27,7 @@ public class CaseManager : MonoBehaviour
         //print curetn count for testing
         Debug.Log("Clues Found: "+ cluesFound);
         //TURN THE DOOR GREEN ONCE ENOUGH CLUES ARE FOUND
-        if (cluesFound >=cluesNeeded)
+        if (cluesFound >= cluesNeeded)
         {
             doorRenderer.material = unlockedMaterial;
         }
